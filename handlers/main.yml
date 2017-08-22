@@ -1,0 +1,12 @@
+---
+# file: handlers/main.yml
+#
+
+- name: restart postgres_exporter
+  service: name=postgres_exporter state=restarted
+
+- name: reload postgres_exporter
+  service: name=postgres_exporter state=reloaded
+
+- name: stop postgres_exporter
+  service: name=postgres_exporter state=stopped
